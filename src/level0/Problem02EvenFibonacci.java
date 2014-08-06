@@ -24,7 +24,7 @@ public class Problem02EvenFibonacci {
 			n3 = n1 + n2;
 			n1 = n2;
 			n2 = n3;
-			if (n3 % 2 == 0) sum += n3;
+			if (n3 & 1 == 0) sum += n3;
 		}
 		
 		System.out.println("The sum of even Fibonacci numbers are " + sum);
