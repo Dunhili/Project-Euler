@@ -1,5 +1,7 @@
 package level0;
 
+import utils.HelperMethods;
+
 /*
  * The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
  *
@@ -11,16 +13,11 @@ package level0;
 public class Problem10SummationOfPrimes {
 	public static void main(String[] args) {
 		int upperLimit = 2000000;
-		int sqrt;
 		long sum = 0;
 		
 		for (int i = 2; i < upperLimit; i++) {
-			sqrt = (int) Math.sqrt(i) + 1;
-			for (int j = 2; j <= sqrt; j++) {
-				if (i % j == 0 && i != j)
-					break;
-				if (j == sqrt)
-					sum += i;
+			if (HelperMethods.isPrime(i)) {
+				sum += i;
 			}
 		}
 		

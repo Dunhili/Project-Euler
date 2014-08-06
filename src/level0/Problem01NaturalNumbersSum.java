@@ -14,8 +14,9 @@ public class Problem01NaturalNumbersSum {
 		int sum = 0;
 		int limit = 1000;
 		for (int i = 1; i < limit; i++) {
-			if (i % 3 == 0 || i % 5 == 0)
+			if (i % 3 == 0 || i % 5 == 0) {
 				sum += i;
+			}
 		}
 		System.out.println("Sum for natural numbers below " + limit + " is : " + sum);
 	}
