@@ -80,18 +80,28 @@ public class HelperMethods {
 		return true;
 	}
 	
-	public static boolean isFactor(int n) {
-		return true;
-	}
-	
+	/**
+	 * Calculates the nth fibonacci number in the sequence.
+	 * @param n nth number in the fibonacci sequence to calculate
+	 * @return nth sequence number
+	 */
 	public static int fibonacci(int n) {
-		if (n == 0 || n == 1) {
+		if (n == 0 || n == 1 || n == 2) {
 			return 1;
 		}
-		else if (n == 2) {
+		else if (n == 3) {
 			return 2;
 		}
 		
-		return 3;
+		int n1 = 1;
+		int n2 = 1;
+		int n3 = 2;
+		for (int i = 3; i <= n; i++) {
+			n3 = n1 + n2;
+			n1 = n2;
+			n2 = n3;
+		}
+		
+		return n3;
 	}
 }
