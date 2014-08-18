@@ -18,6 +18,6 @@ public class Problem01NaturalNumbersSum {
 				sum += i;
 			}
 		}
-		System.out.println("Sum for natural numbers below " + limit + " is : " + sum);
+		System.out.println("Sum for natural numbers below " + limit + " is : " + sum + ".");
 	}
 }
